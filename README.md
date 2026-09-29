@@ -87,6 +87,19 @@ npm run dev -- --port 3000
 ```
 - Frontend URL: `http://localhost:3000`
 
+### Deploy Frontend
+
+The frontend lives in `frontend/`. For Vercel, import the repository from its
+root; `vercel.json` builds and serves `frontend/dist` automatically. For
+Netlify, import the repository normally; `netlify.toml` contains the build
+command, publish directory, and SPA fallback needed for direct page loads.
+
+If your hosting provider asks for manual settings, use:
+
+- Build command: `npm run build` (set the base/root directory to `frontend`)
+- Output/publish directory: `dist`
+- Node install directory: `frontend`
+
 ---
 
 ## 📡 REST API Reference
